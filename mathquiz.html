@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simple quiz 2</title>
-<style>
+    <title>Maths Quiz</title>
+    <style>
         
         .container {
             border: 3px solid black;
             border-radius: 10px;
             width: 60%;
-          font-family:cursive;
+          font-family:courier;
+           font-size:300%;
             padding: 20px;
             display: none;
         }
@@ -54,15 +54,15 @@ body{
         <button onclick="result()">SUBMIT QUIZ</button>
     </div>
     <script>
-        // displaying the first block of question
+        
         document.getElementsByClassName('container')[0].style.display = "block";
 
-        // DEFINING THE NEXT FUNCTION
+      
         function next(id) {
             document.getElementsByClassName('container')[id-1].style.display = "none";
             document.getElementsByClassName('container')[id].style.display = "block";
         }
-        //getting final result
+       
         function result() {
             var score = 0;
             var total = 3;
