@@ -28,29 +28,45 @@ body{
 
 <body>
     <div class="container">
-        Q1 what is 100+200?<hr>
-        <input type="radio" name="question1" id="correct1">300<br>
-        <input type="radio" name="question1">400<br>
-        <input type="radio" name="question1">150<br>
-        <input type="radio" name="question1">600<br>
+        Q1 The sum ofall two digit odd numbers is ?<hr>
+        <input type="radio" name="question1" id="correct1">2475<br>
+        <input type="radio" name="question1">2575<br>
+        <input type="radio" name="question1">2524<br>
+        <input type="radio" name="question1">2425<br>
         <button class="next" onclick="next(1)">NEXT</button>
     </div>
 
     <div class="container">
-        Q2 what is 100+300?<hr>
-        <input type="radio" name="question2" >300<br>
-        <input type="radio" name="question2" id="correct2">400<br>
-        <input type="radio" name="question2">150<br>
-        <input type="radio" name="question2">600<br>
+        Q2 Tangents from an external point to a circle are<hr>
+        <input type="radio" name="question2" >Parallel<br>
+        <input type="radio" name="question2" id="correct2">Equal<br>
+        <input type="radio" name="question2">Not equal<br>
+        <input type="radio" name="question2">Perpendicular<br>
         <button class="next" onclick="next(2)">NEXT</button>
     </div>
 
     <div class="container">
-        Q3 what is 300+200?<hr>
-        <input type="radio" name="question3" >300<br>
-        <input type="radio" name="question3">400<br>
-        <input type="radio" name="question3">150<br>
-        <input type="radio" name="question3" id="correct3">500<br>
+        Q3 The total number of events of throwing 10 coins simultaneously is<hr>
+        <input type="radio" name="question3" >512<br>
+        <input type="radio" name="question3">10<br>
+        <input type="radio" name="question3">200<br>
+        <input type="radio" name="question3" id="correct3">1024<br>
+        <button class="next" onclick="next(3)">NEXT</button>
+    </div>
+    <div class="container">
+        Q4 HCF of 8,9,25 is<hr>
+        <input type="radio" name="question4" >8<br>
+        <input type="radio" name="question4" id="correct2">1<br>
+        <input type="radio" name="question4">9<br>
+        <input type="radio" name="question4">5<br>
+        <button class="next" onclick="next(4)">NEXT</button>
+    </div>
+    <div class="container">
+        Q5 Sum of two irrational numbers is<hr>
+        <input type="radio" name="question4" >Rational<br>
+        <input type="radio" name="question4" id="correct2">Irrational<br>
+        <input type="radio" name="question4">Both of above<br>
+        <input type="radio" name="question4">1<br>
         <button onclick="result()">SUBMIT QUIZ</button>
     </div>
     <script>
@@ -65,7 +81,7 @@ body{
        
         function result() {
             var score = 0;
-            var total = 3;
+            var total = 5;
             if (document.getElementById('correct1').checked) {
                 score++;
             }
@@ -73,6 +89,12 @@ body{
                 score++;
             }
             if (document.getElementById('correct3').checked) {
+                score++;
+            }
+            if (document.getElementById('correct4').checked) {
+                score++;
+            }
+            if (document.getElementById('correct5').checked) {
                 score++;
             }
             alert("your score is: "+ score + "/"+ total);
